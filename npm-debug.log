@@ -1,0 +1,192 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'scss-compile' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'scss-compile', null ]
+7 verbose cache add spec scss-compile
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'scss-compile',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'scss-compile',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed scss-compile@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for scss-compile
+11 info addNameTag [ 'scss-compile', 'latest' ]
+12 silly mapToRegistry name scss-compile
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'scss-compile',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'scss-compile',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/scss-compile
+17 verbose addNameTag registry:https://registry.npmjs.org/scss-compile not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/scss-compile
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 11:29:46 AM
+21 verbose request id fadabafc5cee3b5f
+22 http request GET https://registry.npmjs.org/scss-compile
+23 http 200 https://registry.npmjs.org/scss-compile
+24 verbose headers { server: 'nginx/1.10.1',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'last-modified': 'Thu, 03 Sep 2015 15:05:51 GMT',
+24 verbose headers   etag: 'W/"55e861cf-1b4a"',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '1500',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Fri, 08 Sep 2017 15:29:47 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '0',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-ord1720-ORD',
+24 verbose headers   'x-cache': 'MISS',
+24 verbose headers   'x-cache-hits': '0',
+24 verbose headers   'x-timer': 'S1504884587.300715,VS0,VE53',
+24 verbose headers   vary: 'Accept-Encoding, Accept' }
+25 silly get cb [ 200,
+25 silly get   { server: 'nginx/1.10.1',
+25 silly get     'content-type': 'application/json',
+25 silly get     'last-modified': 'Thu, 03 Sep 2015 15:05:51 GMT',
+25 silly get     etag: 'W/"55e861cf-1b4a"',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '1500',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Fri, 08 Sep 2017 15:29:47 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '0',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-ord1720-ORD',
+25 silly get     'x-cache': 'MISS',
+25 silly get     'x-cache-hits': '0',
+25 silly get     'x-timer': 'S1504884587.300715,VS0,VE53',
+25 silly get     vary: 'Accept-Encoding, Accept' } ]
+26 verbose get saving scss-compile to /Users/Tori/.npm/registry.npmjs.org/scss-compile/.cache.json
+27 verbose correctMkdir /Users/Tori/.npm correctMkdir not in flight; initializing
+28 silly addNameTag next cb for scss-compile with tag latest
+29 silly addNamed scss-compile@0.1.7
+30 verbose addNamed "0.1.7" is a plain semver version for scss-compile
+31 silly mapToRegistry name scss-compile
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'scss-compile',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   name: 'scss-compile',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/scss-compile
+36 verbose addRemoteTarball https://registry.npmjs.org/scss-compile/-/scss-compile-0.1.7.tgz not in flight; adding
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/scss-compile/-/scss-compile-0.1.7.tgz',
+37 verbose addRemoteTarball   '3f8127d79c2a6d635826db428c50815ab6012e7d' ]
+38 info retry fetch attempt 1 at 11:29:47 AM
+39 info attempt registry request try #1 at 11:29:47 AM
+40 http fetch GET https://registry.npmjs.org/scss-compile/-/scss-compile-0.1.7.tgz
+41 http fetch 200 https://registry.npmjs.org/scss-compile/-/scss-compile-0.1.7.tgz
+42 silly fetchAndShaCheck shasum 3f8127d79c2a6d635826db428c50815ab6012e7d
+43 verbose addTmpTarball /var/folders/2w/_cbn2r3s7n91dlp3vyw_tcsc0000gn/T/npm-10655-622b7db5/registry.npmjs.org/scss-compile/-/scss-compile-0.1.7.tgz not in flight; adding
+44 verbose addTmpTarball already have metadata; skipping unpack for scss-compile@0.1.7
+45 verbose correctMkdir /Users/Tori/.npm correctMkdir not in flight; initializing
+46 silly cache afterAdd scss-compile@0.1.7
+47 verbose afterAdd /Users/Tori/.npm/scss-compile/0.1.7/package/package.json not in flight; writing
+48 verbose correctMkdir /Users/Tori/.npm correctMkdir not in flight; initializing
+49 verbose afterAdd /Users/Tori/.npm/scss-compile/0.1.7/package/package.json written
+50 silly install resolved [ { name: 'scss-compile',
+50 silly install resolved     version: '0.1.7',
+50 silly install resolved     description: 'A Sassy CSS Compiler',
+50 silly install resolved     main: 'index.js',
+50 silly install resolved     dependencies: { 'npm-registry': '^0.1.13' },
+50 silly install resolved     devDependencies: {},
+50 silly install resolved     scripts:
+50 silly install resolved      { test: 'npm run scss-compile',
+50 silly install resolved        'scss-compile': 'node-sass -rw assets/scss -o assets/css',
+50 silly install resolved        watch: 'npm run scss-compile' },
+50 silly install resolved     repository:
+50 silly install resolved      { type: 'git',
+50 silly install resolved        url: 'git+https://github.com/tylerreckart/sass-compile.git' },
+50 silly install resolved     keywords: [ 'scss', 'sass', 'css', 'compiler' ],
+50 silly install resolved     author:
+50 silly install resolved      { name: 'Tyler A. Reckart',
+50 silly install resolved        email: 'tyler.reckart@gmail.com',
+50 silly install resolved        url: 'http://tylerreckart.com' },
+50 silly install resolved     license: 'MIT',
+50 silly install resolved     bugs: { url: 'https://github.com/tylerreckart/sass-compile/issues' },
+50 silly install resolved     homepage: 'https://github.com/tylerreckart/sass-compile#readme',
+50 silly install resolved     gitHead: '1a56f19f2e292ccd4789c34e57e5754c0f55d475',
+50 silly install resolved     _id: 'scss-compile@0.1.7',
+50 silly install resolved     _shasum: '3f8127d79c2a6d635826db428c50815ab6012e7d',
+50 silly install resolved     _from: 'scss-compile@latest',
+50 silly install resolved     _npmVersion: '2.14.1',
+50 silly install resolved     _nodeVersion: '0.12.7',
+50 silly install resolved     _npmUser: { name: 'tylerreckart', email: 'tyler.reckart@gmail.com' },
+50 silly install resolved     dist:
+50 silly install resolved      { shasum: '3f8127d79c2a6d635826db428c50815ab6012e7d',
+50 silly install resolved        tarball: 'https://registry.npmjs.org/scss-compile/-/scss-compile-0.1.7.tgz' },
+50 silly install resolved     maintainers: [ [Object] ],
+50 silly install resolved     directories: {},
+50 silly install resolved     _resolved: 'https://registry.npmjs.org/scss-compile/-/scss-compile-0.1.7.tgz' } ]
+51 info install scss-compile@0.1.7 into /usr/local/lib
+52 info installOne scss-compile@0.1.7
+53 verbose installOne of scss-compile to /usr/local/lib not in flight; installing
+54 verbose correctMkdir /Users/Tori/.npm/_locks correctMkdir not in flight; initializing
+55 verbose lock using /Users/Tori/.npm/_locks/scss-compile-b7213416a0ed4917.lock for /usr/local/lib/node_modules/scss-compile
+56 silly install write writing scss-compile 0.1.7 to /usr/local/lib/node_modules/scss-compile
+57 verbose unbuild lib/node_modules/scss-compile
+58 silly gentlyRm /usr/local/lib/node_modules/scss-compile is being purged from base /usr/local
+59 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/scss-compile
+60 verbose tar unpack /Users/Tori/.npm/scss-compile/0.1.7/package.tgz
+61 verbose tar unpacking to /usr/local/lib/node_modules/scss-compile
+62 silly gentlyRm /usr/local/lib/node_modules/scss-compile is being purged
+63 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/scss-compile
+64 silly gunzTarPerm modes [ '755', '644' ]
+65 error tar.unpack untar error /Users/Tori/.npm/scss-compile/0.1.7/package.tgz
+66 verbose unlock done using /Users/Tori/.npm/_locks/scss-compile-b7213416a0ed4917.lock for /usr/local/lib/node_modules/scss-compile
+67 verbose fstream_path /usr/local/lib/node_modules/scss-compile
+68 verbose fstream_type Directory
+69 verbose fstream_class DirWriter
+70 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/scss-compile'
+70 verbose stack     at Error (native)
+71 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+71 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+71 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+72 verbose cwd /Applications/MAMP/htdocs/PAP
+73 error Darwin 16.3.0
+74 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "scss-compile"
+75 error node v4.5.0
+76 error npm  v2.15.9
+77 error path /usr/local/lib/node_modules/scss-compile
+78 error code EACCES
+79 error errno -13
+80 error syscall mkdir
+81 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/scss-compile'
+81 error     at Error (native)
+81 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/scss-compile']
+81 error   errno: -13,
+81 error   code: 'EACCES',
+81 error   syscall: 'mkdir',
+81 error   path: '/usr/local/lib/node_modules/scss-compile',
+81 error   fstream_type: 'Directory',
+81 error   fstream_path: '/usr/local/lib/node_modules/scss-compile',
+81 error   fstream_class: 'DirWriter',
+81 error   fstream_stack:
+81 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+81 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+81 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+82 error Please try running this command again as root/Administrator.
+83 verbose exit [ -13, true ]
+84 verbose unbuild lib/node_modules/scss-compile
+85 silly gentlyRm /usr/local/lib/node_modules/scss-compile is being purged from base /usr/local
+86 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/scss-compile

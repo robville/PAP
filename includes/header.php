@@ -13,7 +13,7 @@
 <head>
     <title>Home | Print a President</title>
     <!-- link stylesheet -->
-    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
     <!-- end head -->
 </head>
 
