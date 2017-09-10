@@ -7,4 +7,9 @@
 @import "components/navigation";
 @import "components/buttons";
 @import "components/forms";
+@import "components/footer";
+
+* {
+  background-color: $offWhite;
+}
 

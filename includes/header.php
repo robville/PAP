@@ -11,9 +11,9 @@
 
 <!-- begin head -->
 <head>
-    <title>Home | Print a President</title>
+    <title>Print a President</title>
     <!-- link stylesheet -->
-    <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
     <!-- end head -->
 </head>
 
@@ -22,11 +22,11 @@
 
     <!-- wrapper div to hold navigation begin -->
     <div id="nav-div">
-        LOGO GOES HERE!!!
-        <!-- navigation begin -->
+<!-- navigation begin -->
         <nav>
             <!-- left side of navigation -->
             <div id="nav-left">
+                LOGO GOES HERE!!!
                 <a href="../www/index.php">HOME</a>
                 <a href="../www/about.php">ABOUT</a>
                 <a href="../www/contact.php">CONTACT</a>
@@ -34,9 +34,16 @@
 
             <!-- right side of navigation -->
             <div id="nav-right">
-                <a href="../www/loginForm.php">LOGIN</a>
-                <a href="">LOGOUT</a>
-                <a href="../www/registerForm.php">REGISTER</a>
+                <!-- show login if login is empty -->
+                <?php
+                    if(empty($login)) {
+                        echo "<a href='../www/loginForm.php'>LOGIN</a>";
+                    }else{ //if logged in, show logout and profile
+                        echo "<a href='../www/userProfile.php'>PROFILE</a>";
+                        echo "<a href=''>LOGOUT</a>";
+                }
+                ?>
+
             </div>
             <!-- navigation end -->
         </nav>

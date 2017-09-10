@@ -1,0 +1,31 @@
+nav {
+  background-color: $red;
+  line-height: 100px;
+  width: 100%;
+  display: flex;
+  color: $offWhite;
+
+
+  a {
+    position: relative;
+    padding: 5px;
+    text-decoration: none;
+    background-color: $red;
+    color: $offWhite;
+  }
+}
+
+#nav-div {
+    width: 100%;
+    background-color: $red;
+
+  #nav-left {
+    width: 40%;
+    background-color: $red;
+  }
+
+  #nav-right{
+    width: 40%;
+    background-color: $red;
+  }
+}
