@@ -1,0 +1,25 @@
+#formStyle {
+
+  input{
+    border: 1px solid $red;
+    border-radius: 5px;
+    color: $red;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  textarea{
+    border: 1px solid $red;
+    border-radius: 5px;
+    color: $red;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  input[type=button], input[type=submit], input[type=reset]{
+    background-color: $red;
+    border: none;
+    color: $offWhite;
+  }
+}

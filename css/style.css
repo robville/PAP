@@ -26,6 +26,28 @@ nav a {
   background-color: #800020;
 }
 
+#formStyle input {
+  border: 1px solid #800020;
+  border-radius: 5px;
+  color: #800020;
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+#formStyle textarea {
+  border: 1px solid #800020;
+  border-radius: 5px;
+  color: #800020;
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+#formStyle input[type=button], #formStyle input[type=submit], #formStyle input[type=reset] {
+  background-color: #800020;
+  border: none;
+  color: #faebd7;
+}
+
 #footer {
   position: fixed;
   bottom: 0;
