@@ -5,7 +5,7 @@ include ('../includes/header.php');
 ?>
 
 <center>
-    <form action="" method="post" id="formStyle">
+    <form action="register.php" method="get" id="formStyle">
         <br><input name="firstname" type="text" size="55" placeholder="FIRST NAME" required>
         <br><input name="lastname" type="text" size="55" placeholder="LAST NAME" required>
         <br><input name="username" type="text" size="55" placeholder="USERNAME" required>
