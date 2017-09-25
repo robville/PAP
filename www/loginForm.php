@@ -14,7 +14,10 @@ include ('../includes/header.php');
         <input class="button" type="submit" name="Cancel" value=" CANCEL " onclick="window.location.href = 'loginform.php'" />
     </form>
     <br>If you don't have an account with us,
-    <br>please <a href='registerForm.php'>REGISTER</a>.
+    <br>please <a href='registerForm.php'>REGISTER</a>
+    <br>
+    <br>
+    <br><a href="forgotPassword.php">FORGOT PASSWORD?</a>
 </center>
 
 <?php

@@ -18,8 +18,11 @@ if (!$query) {
 }
 
 ?>
+
     <br>
     <br>
+    <br>
+    <div>
         <table>
             <tr>
                 <th>ID</th>
@@ -53,7 +56,7 @@ if (!$query) {
             ?>
         </table>
 
-
+</div>
 
 
 
