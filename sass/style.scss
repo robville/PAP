@@ -1,15 +1,26 @@
-//base
+
+
+/*base*/
 @import "base/variables";
 @import "base/mixins";
 @import "base/reset";
 
-//components
+/*components*/
 @import "components/navigation";
 @import "components/buttons";
 @import "components/forms";
 @import "components/footer";
 
+
+/*Libraries*/
+
+@import "../bower_components/sweetalert2/src/sweetalert2";
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import "../bower_components/animate.css/sass/animate.scss";
+@import "../bower_components/bootstrap/sass/bootstrap.scss";
+
+
+/*random*/
 * {
   background-color: $offWhite;
 }
-

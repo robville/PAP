@@ -1,5 +1,4 @@
-<!-- link scripts -->
-<script src="../js/main.js"></script>
+<!--don't put scripts at the end ... make them asynchronous and put them in the head -->
 
 
 <div id="footer">

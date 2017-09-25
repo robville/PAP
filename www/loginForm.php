@@ -6,7 +6,9 @@ include ('../includes/header.php');
 
 <center>
     <form method='get' action='login.php' id="formStyle">
-        <?php echo $message; ?>
+        <?php  if (isset($message)){
+            echo $message;
+        } ?>
         <br>
         <br><input type='text' name='username' size='55' placeholder="USERNAME" required>
         <br><input type='password' name='password' size='55' placeholder="PASSWORD" required>

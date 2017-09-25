@@ -1,19 +1,27 @@
 <?php
 
 
+
 ?>
 
 <!-- begin HTML -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
 
 <!-- begin head -->
 <head>
     <title>Print a President</title>
+    <!--  link scripts (asynchronous)  -->
+
+    <script src="../bower_components/jquery/dist/jquery.min.js" async></script>
+    <script src="../bower_components/sweetalert2/dist/sweetalert2.min.js" async></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" async></script>
+    <script src="../js/main.js" async></script>
+
     <!-- link stylesheet -->
     <link href="../css/style.css" type="text/css" rel="stylesheet">
+
     <!-- end head -->
 </head>
 

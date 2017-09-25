@@ -1,10 +1,17 @@
 <?php
 
 //MAMP
+//$dbhost = 'localhost';
+//$dbuser = 'root';
+//$dbpwd  = 'root';
+//$dbname = 'PAP';  //'<your MAMP database name>';$dbhost = 'localhost';
+
+
+//XAMPP
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpwd  = 'root';
-$dbname = 'PAP';  //'<your MAMP database name>';
+$dbpwd  = '';
+$dbname = 'pap';  //'<rob's localhost db... lowercase>';
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname);
 
