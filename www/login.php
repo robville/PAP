@@ -35,3 +35,5 @@ $conn->close();
 
 //redirect to the user profile page
 header("Location: userProfile.php");
+
+?>

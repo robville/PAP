@@ -6,7 +6,7 @@ include ('../includes/header.php');
 
 
 <center>
-    <form action="contactSend.php" method="get" id="formStyle">
+    <form action="contactSend.php" method="POST" id="formStyle">
         <br><input name="firstname" type="text" size="55" placeholder="FIRST NAME" required>
         <br><input name="lastname" type="text" size="55" placeholder="LAST NAME" required>
         <br><input name="email" type="email" size="55" placeholder="EMAIL" required>
@@ -18,6 +18,9 @@ include ('../includes/header.php');
     </form>
 </center>
 
+
 <?php
 //include the footer
 include ('../includes/footer.php');
+
+?>

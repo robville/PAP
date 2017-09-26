@@ -4,11 +4,12 @@ include ('../includes/header.php');
 
 ?>
 
-<center>
-    <h1>Thank You for Contacting Us</h1>
-    <p>Someone will contact you shortly.</p>
-</center>
+    <h1>Thank you for contacting us!</h1>
+    <br><h2>Someone will be in touch with you shortly.</h2>
+
 
 <?php
 //include the footer
 include ('../includes/footer.php');
+
+?>

@@ -2,9 +2,9 @@
 
 //MAMP
 $dbhost = 'localhost';
-$dbuser = 'root';
-$dbpwd  = 'root';
-$dbname = 'PAP';  //'<your MAMP database name>';
+$dbuser = 'CharlieHyde';
+$dbpwd  = 'BHPS1833';
+$dbname = 'PrintAPresident';  //'<your MAMP database name>';
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname);
 
@@ -24,3 +24,5 @@ if (!$conn) {
 //   die('Connect Error (' . mysqli_connect_errno() . ') '
 //       . mysqli_connect_error());
 //}
+
+?>

@@ -63,3 +63,4 @@ if (!$query) {
 <?php
 //include the footer
 include ('../includes/footer.php');
+?>
