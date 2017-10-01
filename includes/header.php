@@ -55,7 +55,7 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
                         echo "<a href='../www/loginForm.php'>LOGIN</a>";
                     }else{ //if logged in, show logout and profile
                         echo "<a href='../www/userProfile.php'>PROFILE</a>";
-                        echo "<a href=''>LOGOUT</a>";
+                        echo "<a href='../www/logout.php'>LOGOUT</a>";
                 }
                 ?>
 

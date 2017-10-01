@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 //create variable login status.
-$_SESSION['login_status'] = 2;
+$_SESSION['login_status'] = "";
 $username = $password = "";
 
 //retrieve user name and password from the form in the login form
