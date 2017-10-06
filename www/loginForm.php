@@ -1,13 +1,14 @@
 <?php
 //include the header
 include ('../includes/header.php');
+include ('../includes/databaseConnect.php');
 
+$message = "Please enter your username and password to login.";
 //check the login status
 $login_status = '';
 if (isset($_SESSION['login_status'])) {
     $login_status = $_SESSION['login_status'];
 }
-
 // the user's last login attempt succeeded
 if ($login_status == 1) {
     echo "<p> You are logged in as " . $_SESSION['login'] . ".</p>";
@@ -18,7 +19,6 @@ if ($login_status == 1) {
 
 //the user has just registered
 if ($login_status == 3) {
-    //redirect to the index page
     header("Location: index.php");
 }
 
@@ -26,7 +26,6 @@ if ($login_status == 3) {
 if ($login_status == 2) {
     $message = "Username or password is invalid. Please try again.";
 }
-
 ?>
 
 <center>

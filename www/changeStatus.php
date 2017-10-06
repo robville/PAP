@@ -1,6 +1,6 @@
 <?php
 include "../includes/header.php";
-require_once('../includes/databaseConnect.php');
+require ('../includes/databaseConnect.php');
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -16,9 +16,11 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
 //redirect to the profile page
 header("Location: profile.php");
 
+if(isset($_POST)){
+    $status = $_POST['value'];
+}
 
-//insert statement. The id field is an auto field.
-$sql = "UPDATE users status VALUES('$status')";
+$sql = "UPDATE users SET status=$status WHERE username=$login";
 
 //execut the insert query
 $query = @$conn->query($sql);

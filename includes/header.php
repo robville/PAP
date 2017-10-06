@@ -1,4 +1,5 @@
 <?php
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -6,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 // variables for a user's login, name and role
 $login = '';
 $name = '';
-$role = 0;
+$role = '';
 
 // if the user has logged in, retrieve login, name, and role
 if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['role'])) {
@@ -56,6 +57,9 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
                     }else{ //if logged in, show logout and profile
                         echo "<a href='../www/userProfile.php'>PROFILE</a>";
                         echo "<a href='../www/logout.php'>LOGOUT</a>";
+                }
+                if ($role == 1) {
+                    echo "<a href='../www/adminPage.php'>ADMIN PAGE</a>";
                 }
                 ?>
 

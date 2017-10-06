@@ -1,16 +1,19 @@
 <?php
-include '../includes/header.php';
-require '../includes/databaseConnect.php';
-
-
-
+include ('../includes/header.php');
+include ('../includes/databaseConnect.php');
 ?>
 
-<form action="" method="post">
-    <p>Your Email: <input type="text" name="email" size="50" maxlength="255">
-        <input type="submit" name="submit" value="Get New Password"></p>
-</form>
+
+    <form action="forgotPassword2.php" method="post">
+            <input type="text" name="email" />
+            <input type="submit" value="Reset My Password" />
+            <input type="hidden" name="register" value="TRUE" />
+    </form>
+
+
 
 <?php
-include '../includes/footer.php';
+//include the footer
+include ('../includes/footer.php');
+
 ?>

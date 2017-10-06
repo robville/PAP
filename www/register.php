@@ -12,6 +12,7 @@ $_SESSION['login_status'] = 3;
 //redirect to the index page
 header("Location: loginForm.php");
 
+
 //retrieve user inputs from the form
 if (!filter_has_var(INPUT_GET, 'firstname') ||
     !filter_has_var(INPUT_GET, 'lastname') ||

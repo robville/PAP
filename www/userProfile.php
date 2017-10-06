@@ -2,6 +2,11 @@
 require '../includes/header.php';
 require '../includes/databaseConnect.php';
 
+// start session if it has not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 // if the user has logged in, retrieve login, name, and role
 if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['role'])) {
     $login = $_SESSION['login'];
@@ -10,7 +15,7 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
 }
 
 //select statement
-$sql = "SELECT * FROM users WHERE username= '" . $_SESSION['login'] . "'";
+$sql = "SELECT * FROM users WHERE username='$username'";
 
 //execute the query
 $query = $conn->query($sql);
@@ -55,17 +60,6 @@ if (!$query) {
         <td><?php echo $row['status'] ?></td>
     </tr>
 </table>
-
-Change status of chosen piece:
-<form method="POST" action="changeStatus.php">
-    <select>
-        <option name="inprogress">In Progress</option>
-        <option name="printed">Printed</option>
-        <option name="shipped">Shipped</option>
-        <option name="complete">Complete</option>
-    </select>
-    <input type="submit" value="SUBMIT">
-</form>
 
 <?php
 require '../includes/footer.php';

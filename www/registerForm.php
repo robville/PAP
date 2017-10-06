@@ -1,8 +1,9 @@
 <?php
 //include the header
 include ('../includes/header.php');
+include ('../includes/databaseConnect.php');
 
-$message = "Please enter your username and password to login.";
+$message = "Please enter your information to register.";
 //check the login status
 $login_status = '';
 if (isset($_SESSION['login_status'])) {
@@ -29,7 +30,7 @@ if ($login_status == 2) {
 ?>
 
 <center>
-    <form action="register.php" method="get" id="formStyle">
+    <form action="register.php" method="post" id="formStyle">
         <br><input name="firstname" type="text" size="55" placeholder="FIRST NAME" required>
         <br><input name="lastname" type="text" size="55" placeholder="LAST NAME" required>
         <br><input name="username" type="text" size="55" placeholder="USERNAME" required>
