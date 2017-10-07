@@ -4,11 +4,6 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// variables for a user's login, name and role
-$login = '';
-$name = '';
-$role = '';
-
 // if the user has logged in, retrieve login, name, and role
 if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['role'])) {
     $login = $_SESSION['login'];
