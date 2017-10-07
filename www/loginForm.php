@@ -17,11 +17,6 @@ if ($login_status == 1) {
     exit();
 }
 
-//the user has just registered
-if ($login_status == 3) {
-    header("Location: index.php");
-}
-
 // the user's last login attempt failed
 if ($login_status == 2) {
     $message = "Username or password is invalid. Please try again.";
@@ -29,7 +24,7 @@ if ($login_status == 2) {
 ?>
 
 <center>
-    <form method='get' action='login.php' id="formStyle">
+    <form method='POST' action='login.php' id="formStyle">
         <?php echo $message; ?>
         <br>
         <br><input type='text' name='username' size='55' placeholder="USERNAME" required>
