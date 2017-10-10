@@ -41,7 +41,7 @@ if (!$query) {
             //create a while loop here to insert one row for each user.
             while (($row = $query->fetch_assoc()) !== NULL) {
                 echo "<tr>";
-                echo "<td>", $row['id'], "</td>";
+                echo "<td><a href='userDetails.php?id=" , $row['id'], "'>", $row['id'], "</a></td>";
                 echo "<td>", $row['firstname'], "</td>";
                 echo "<td>", $row['lastname'], "</td>";
                 echo "<td>", $row['username'], "</td>";
