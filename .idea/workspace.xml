@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="653b3a89-838a-4d49-9595-9cf9605327c5" name="Default" comment="Very simple skeleton">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/userDetails.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/adminPage.php" afterPath="$PROJECT_DIR$/www/adminPage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/userDetails.php" afterPath="$PROJECT_DIR$/www/userDetails.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,10 +30,10 @@
       <file leaf-file-name="adminPage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/adminPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="43" column="93" lean-forward="false" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
+            <state relative-caret-position="234">
+              <caret line="43" column="77" lean-forward="false" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
               <folding>
-                <marker date="1507672277000" expanded="true" signature="120:139" ph="SELECT * fro... users" />
+                <marker date="1507674643000" expanded="true" signature="120:139" ph="SELECT * fro... users" />
               </folding>
             </state>
           </provider>
@@ -98,6 +97,7 @@
         <option value="$PROJECT_DIR$/www/forgotUsername.php" />
         <option value="$PROJECT_DIR$/www/forgotPassword2.php" />
         <option value="$PROJECT_DIR$/www/sendUsername.php" />
+        <option value="$PROJECT_DIR$/www/userDetails.php" />
         <option value="$PROJECT_DIR$/www/adminPage.php" />
       </list>
     </option>
@@ -113,9 +113,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="722" />
-    <option name="width" value="718" />
-    <option name="height" value="900" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -240,7 +240,6 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -375,7 +374,7 @@
       <workItem from="1506294806335" duration="147000" />
       <workItem from="1506296642117" duration="6227000" />
       <workItem from="1506388252970" duration="12158000" />
-      <workItem from="1506877729076" duration="47843000" />
+      <workItem from="1506877729076" duration="48880000" />
     </task>
     <task id="LOCAL-00001" summary="Very simple skeleton">
       <created>1504821245572</created>
@@ -388,7 +387,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91906000" />
+    <option name="totallyTimeSpent" value="92943000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,7 +399,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="722" y="0" width="718" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="795" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -409,7 +408,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23964497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115879826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1595136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -635,16 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/userProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <marker date="1507315855000" expanded="true" signature="475:521" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/about.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -739,59 +728,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/updatePassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <marker date="1507352118000" expanded="true" signature="312:387" ph="UPDATE users... " />
-            <marker date="1507352118000" expanded="true" signature="430:472" ph="SELECT passw... users" />
-            <marker date="1507352118000" expanded="true" signature="430:487" ph="SELECT passw... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/forgotPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/forgotUsername.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/forgotPassword2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <marker date="1507670931000" expanded="true" signature="246:290" ph="SELECT email... users" />
-            <marker date="1507670931000" expanded="true" signature="377:437" ph="INSERT INTO tokens... " />
-            <marker date="1507670931000" expanded="true" signature="627:878" ph="..." />
-            <marker date="1507670931000" expanded="true" signature="638:684" ph="..." />
-            <marker date="1507670931000" expanded="true" signature="695:758" ph="..." />
-            <marker date="1507670931000" expanded="true" signature="695:866" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/resetPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding>
-            <marker date="1507352136000" expanded="true" signature="1028:1066" ph="SELECT * FRO... tokens" />
-            <marker date="1507352136000" expanded="true" signature="1028:1081" ph="SELECT * FRO... tokens" />
-            <marker date="1507352136000" expanded="true" signature="1028:1084" ph="SELECT * FRO... tokens" />
-            <marker date="1507352136000" expanded="true" signature="1162:1215" ph="UPDATE token... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,20 +755,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/userProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1507315855000" expanded="true" signature="475:521" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/updatePassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <marker date="1507352118000" expanded="true" signature="312:387" ph="UPDATE users... " />
+            <marker date="1507352118000" expanded="true" signature="430:472" ph="SELECT passw... users" />
+            <marker date="1507352118000" expanded="true" signature="430:487" ph="SELECT passw... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/forgotPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/forgotPassword2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <marker date="1507670931000" expanded="true" signature="246:290" ph="SELECT email... users" />
+            <marker date="1507670931000" expanded="true" signature="377:437" ph="INSERT INTO tokens... " />
+            <marker date="1507670931000" expanded="true" signature="627:878" ph="..." />
+            <marker date="1507670931000" expanded="true" signature="638:684" ph="..." />
+            <marker date="1507670931000" expanded="true" signature="695:758" ph="..." />
+            <marker date="1507670931000" expanded="true" signature="695:866" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/resetPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <marker date="1507352136000" expanded="true" signature="1028:1066" ph="SELECT * FRO... tokens" />
+            <marker date="1507352136000" expanded="true" signature="1028:1081" ph="SELECT * FRO... tokens" />
+            <marker date="1507352136000" expanded="true" signature="1028:1084" ph="SELECT * FRO... tokens" />
+            <marker date="1507352136000" expanded="true" signature="1162:1215" ph="UPDATE token... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/userDetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="600">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <marker date="1507674628000" expanded="true" signature="144:178" ph="SELECT * fro... users" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/adminPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="43" column="93" lean-forward="false" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
+        <state relative-caret-position="234">
+          <caret line="43" column="77" lean-forward="false" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
           <folding>
-            <marker date="1507672277000" expanded="true" signature="120:139" ph="SELECT * fro... users" />
+            <marker date="1507674643000" expanded="true" signature="120:139" ph="SELECT * fro... users" />
           </folding>
         </state>
       </provider>
