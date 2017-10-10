@@ -1,18 +1,5 @@
 <?php
 include ('../includes/header.php');
-
-
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// if the user has logged in, retrieve login, name, and role
-if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['role'])) {
-    $login = $_SESSION['login'];
-    $name = $_SESSION['name'];
-    $role = $_SESSION['role'];
-}
-
 include ('../includes/databaseConnect.php');
 //Variable to save errors
 $errors = array();

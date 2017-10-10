@@ -1,18 +1,5 @@
 <?php
 include ('../includes/header.php');
-
-
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-// if the user has logged in, retrieve login, name, and role
-if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['role'])) {
-    $login = $_SESSION['login'];
-    $name = $_SESSION['name'];
-    $role = $_SESSION['role'];
-}
-
 include ('../includes/databaseConnect.php');
 //Variable to save errors
 $errors = array();
@@ -21,9 +8,7 @@ if($_POST['email']){
     $email = $_POST['email'];
 }
 
-
-$query = "SELECT username FROM users WHERE email='" . $email . " '";
-
+$query = mysqli_query(mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname),"SELECT username FROM users WHERE email='" . $email . "'");
 
 while($row = mysqli_fetch_array($query)){
     $username = $row['username'];
@@ -32,6 +17,10 @@ while($row = mysqli_fetch_array($query)){
 if ($username != NULL )
 {
     $_SESSION['username'] = $username;
+}
+else
+{
+    echo "This email address is not registered to a username.";
 }
 
 $to = $email;
