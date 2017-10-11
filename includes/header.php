@@ -25,6 +25,13 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
     <title>Print a President</title>
     <!-- link stylesheet -->
     <link href="../css/style.css" type="text/css" rel="stylesheet">
+
+    <!--insert javascript -->
+    <script src="../bower_components/jquery/src/jquery.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/sketchfabViewer1.0.1.js"></script>
+    <script src="../js/SketchfabAPIUtility.js"></script>
+
     <!-- end head -->
 </head>
 
