@@ -59,10 +59,13 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
                     }else{ //if logged in, show logout and profile
                         echo "<a href='../www/userProfile.php'>PROFILE</a>";
                         echo "<a href='../www/logout.php'>LOGOUT</a>";
-                }
-                if ($role == 1) {
-                    echo "<a href='../www/adminPage.php'>ADMIN PAGE</a>";
-                }
+                        if ($role == 1){
+                            echo "<a href='../www/adminPage.php'>ADMIN PAGE</a>";
+                        }
+                    }
+//                if ($role == 1) {
+//                    echo "<a href='../www/adminPage.php'>ADMIN PAGE</a>";
+//                }
                 ?>
 
             </div>

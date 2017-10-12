@@ -1,10 +1,20 @@
 <?php
 
 //MAMP
-$dbhost = 'localhost';
+//$dbhost = 'localhost';
+//$dbuser = 'CharlieHyde';
+//$dbpwd  = 'BHPS1833';
+//$dbname = 'PrintAPresident';  //'<your MAMP database name>';
+
+
+
+
+//testing
+$dbhost = 'toriroessler.com';
 $dbuser = 'CharlieHyde';
 $dbpwd  = 'BHPS1833';
 $dbname = 'PrintAPresident';  //'<your MAMP database name>';
+
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname);
 

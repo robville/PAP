@@ -9,9 +9,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 // if the user has logged in, retrieve login, name, and role
 if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['role'])) {
-    $login = $_SESSION['login'];
+    $username = $_SESSION['login'];
     $name = $_SESSION['name'];
     $role = $_SESSION['role'];
+
 }
 
 //select statement
