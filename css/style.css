@@ -1,67 +1,44 @@
 @charset "UTF-8";
-nav {
-  background-color: #800020;
-  line-height: 100px;
-  width: 100%;
-  display: flex;
-  color: #faebd7;
-}
-nav a {
-  position: relative;
-  padding: 5px;
-  text-decoration: none;
-  background-color: #800020;
-  color: #faebd7;
-}
-
-#nav-div {
-  width: 100%;
-  background-color: #800020;
-}
-#nav-div #nav-left {
-  width: 40%;
-  background-color: #800020;
-}
-#nav-div #nav-right {
-  width: 40%;
-  background-color: #800020;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-#formStyle input {
-  border: 1px solid #800020;
-  border-radius: 5px;
-  color: #800020;
-  margin: 5px;
-  padding: 5px;
-  font-size: 14px;
-}
-#formStyle textarea {
-  border: 1px solid #800020;
-  border-radius: 5px;
-  color: #800020;
-  margin: 5px;
-  padding: 5px;
-  font-size: 14px;
-}
-#formStyle input[type=button], #formStyle input[type=submit], #formStyle input[type=reset] {
-  background-color: #800020;
-  border: none;
-  color: #faebd7;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
 }
 
-#footer {
-  position: fixed;
-  bottom: 0;
-  height: 30px;
-  line-height: 30px;
-  background-color: #800020;
-  color: #faebd7;
-  display: flex;
-  width: 100%;
+body {
+  line-height: 1;
 }
 
-* {
-  background-color: #faebd7;
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /*!
@@ -6618,4 +6595,77 @@ body.swal2-iosfix {
   100% {
     transform: rotate(360deg);
   }
+}
+nav {
+  background-color: #800020;
+  line-height: 100px;
+  width: 100%;
+  display: flex;
+  color: #faebd7;
+}
+nav a {
+  position: relative;
+  padding: 5px;
+  text-decoration: none;
+  background-color: #800020;
+  color: #faebd7;
+}
+
+#nav-div {
+  width: 100%;
+  background-color: #800020;
+}
+#nav-div #nav-left {
+  width: 40%;
+  background-color: #800020;
+}
+#nav-div #nav-right {
+  width: 40%;
+  background-color: #800020;
+}
+
+.contentWrapper {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#formStyle input {
+  border: 1px solid #800020;
+  border-radius: 5px;
+  color: #800020;
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+#formStyle textarea {
+  border: 1px solid #800020;
+  border-radius: 5px;
+  color: #800020;
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+#formStyle input[type=button], #formStyle input[type=submit], #formStyle input[type=reset] {
+  background-color: #800020;
+  border: none;
+  color: #faebd7;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  line-height: 30px;
+  background-color: #800020;
+  color: #faebd7;
+  display: flex;
+  width: 100%;
+}
+
+* {
+  background-color: #faebd7;
 }
