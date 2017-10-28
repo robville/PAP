@@ -24,6 +24,24 @@
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="DockManager">
+    <window id="4">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/www/index.php">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="255">
+                    <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
     <window id="3">
       <content type="file-editors">
         <state>
@@ -52,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/js/SketchfabAPIUtility.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
-              <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+              <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -108,31 +126,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/index.php">
+      <file leaf-file-name="javaScript.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/javaScript.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="731">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <marker date="1509188167092" expanded="true" signature="151:199" ph="SELECT partn... users" />
-                <marker date="1509188167092" expanded="true" signature="151:202" ph="SELECT partn... users" />
-                <marker date="1509188167092" expanded="true" signature="151:380" ph="SELECT partn... users" />
-                <marker date="1509188167092" expanded="true" signature="173:197" ph="UPDATE users... " />
-                <marker date="1509188167092" expanded="true" signature="396:563" ph="..." />
-                <marker date="1509188167092" expanded="false" signature="417:425" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="619:890" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="718:889" ph="{...}" />
-                <marker date="1509188167092" expanded="true" signature="890:935" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="890:995" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="890:998" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="890:1045" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="890:1078" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="890:1105" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="890:1115" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="890:1159" ph="..." />
-                <marker date="1509188167092" expanded="true" signature="935:936" ph="{...}" />
-                <marker date="1509188167092" expanded="true" signature="935:937" ph="{...}" />
-                <marker date="1509188167092" expanded="true" signature="935:986" ph="{...}" />
+                <marker date="1509194351061" expanded="true" signature="85:136" ph="SELECT partn... users" />
               </folding>
             </state>
           </provider>
@@ -148,27 +148,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkoutFunction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/checkoutFunction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="97" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="104" />
-              <folding>
-                <marker date="1509165327306" expanded="true" signature="520:602" ph="UPDATE users... " />
-                <marker date="1509165327306" expanded="true" signature="656:725" ph="UPDATE parts... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="databaseConnect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/databaseConnect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#15#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/main.scss" />
         <option value="$PROJECT_DIR$/sass/main.scss" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/sass/base/_mixins.scss" />
@@ -241,11 +225,12 @@
         <option value="$PROJECT_DIR$/sass/components/_content.scss" />
         <option value="$PROJECT_DIR$/www/test.php" />
         <option value="$PROJECT_DIR$/www/checkoutFunction.php" />
-        <option value="$PROJECT_DIR$/includes/databaseConnect.php" />
         <option value="$PROJECT_DIR$/includes/header.php" />
-        <option value="$PROJECT_DIR$/js/SketchfabAPIUtility.js" />
-        <option value="$PROJECT_DIR$/www/index.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/includes/databaseConnect.php" />
+        <option value="$PROJECT_DIR$/www/index.php" />
+        <option value="$PROJECT_DIR$/js/SketchfabAPIUtility.js" />
+        <option value="$PROJECT_DIR$/includes/javaScript.php" />
       </list>
     </option>
   </component>
@@ -571,7 +556,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135421000" />
+    <option name="totallyTimeSpent" value="139975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,13 +639,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sass/components/_forms.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/21326637-4c50-4fa7-b17e-8e40a261f236/console.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/344de2c8-831f-449e-96de-7717f5fb5832/console.sql" />
     <entry file="file://$PROJECT_DIR$/sass/components/_buttons.scss">
@@ -744,6 +722,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -895,16 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/databaseConnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#15#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/checkoutFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -913,14 +882,6 @@
             <marker date="1509165327306" expanded="true" signature="520:602" ph="UPDATE users... " />
             <marker date="1509165327306" expanded="true" signature="656:725" ph="UPDATE parts... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/SketchfabAPIUtility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,30 +933,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/databaseConnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/SketchfabAPIUtility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/javaScript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <marker date="1509188167092" expanded="true" signature="151:199" ph="SELECT partn... users" />
-            <marker date="1509188167092" expanded="true" signature="151:202" ph="SELECT partn... users" />
-            <marker date="1509188167092" expanded="true" signature="151:380" ph="SELECT partn... users" />
-            <marker date="1509188167092" expanded="true" signature="173:197" ph="UPDATE users... " />
-            <marker date="1509188167092" expanded="true" signature="396:563" ph="..." />
-            <marker date="1509188167092" expanded="false" signature="417:425" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="619:890" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="718:889" ph="{...}" />
-            <marker date="1509188167092" expanded="true" signature="890:935" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="890:995" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="890:998" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="890:1045" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="890:1078" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="890:1105" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="890:1115" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="890:1159" ph="..." />
-            <marker date="1509188167092" expanded="true" signature="935:936" ph="{...}" />
-            <marker date="1509188167092" expanded="true" signature="935:937" ph="{...}" />
-            <marker date="1509188167092" expanded="true" signature="935:986" ph="{...}" />
+            <marker date="1509194351061" expanded="true" signature="85:136" ph="SELECT partn... users" />
           </folding>
         </state>
       </provider>
