@@ -1,8 +1,11 @@
 <?php
 //include the header
 include ('../includes/header.php');
+include ('../includes/databaseConnect.php');
+
 
 ?>
+
    <div class="contentWrapper">
     <iframe style="border:0" width="640" height="480" src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
    </div>
