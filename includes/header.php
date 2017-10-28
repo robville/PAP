@@ -17,7 +17,6 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
 <!-- begin HTML -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
 
 <!-- begin head -->
@@ -29,8 +28,9 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
     <!--insert javascript -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/sketchfabViewer1.0.1.js"></script>
     <script src="../js/SketchfabAPIUtility.js"></script>
+    <script src="../js/sketchfabViewer1.0.1.js"></script>
+
 
     <!-- end head -->
 </head>

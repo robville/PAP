@@ -33,7 +33,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     this.nodeHashIDMap = {};
     this.eventListeners = {};
     this.nodesRaw;  
-    this.enableDebugLogging = true;
+    this.enableDebugLogging = false;
     this.callback = callbackRef;
     //materialChannelProperties
     this.AOPBR = "AOPBR";
