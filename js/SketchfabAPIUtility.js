@@ -2,8 +2,11 @@
 
 function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectRef) {
     var classScope = this;
+
     this.api;
     this.client;
+
+
     this.clientInitObject = { };//if you want any default init options hard coded just add them here
     if (clientInitObjectRef != null) {
         for (var prop in clientInitObjectRef) {       
@@ -17,10 +20,11 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     this.materialHash = {};
     //node hash stores matrix transform nodes by name
     this.nodeHash = {};
-    
+
+
 
     this.nodeTypeMatrixtransform = "MatrixTransform";
-    this.nodeTypeCurrent = classScope.nodeTypeMatrixtransform;
+    this.nodeTypeCurent = classScope.nodeTypeMatrixtransform;
     this.nodeTypeGeometry = "Geometry";
     this.nodeTypeGroup = "Group";
     this.nodeTypeRigGeometry = "RigGeometry";
@@ -29,6 +33,8 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     classScope.nodeHash[classScope.nodeTypeGeometry] = {};
     classScope.nodeHash[classScope.nodeTypeGroup] = {};
     classScope.nodeHash[classScope.nodeTypeRigGeometry] = {};
+
+
 
     this.nodeHashIDMap = {};
     this.eventListeners = {};
@@ -165,7 +171,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         return dataObjectRef;
     }
    
-   
+
 
     this.generateMaterialHash = function (err, materials) {
         if (err) {
@@ -176,19 +182,25 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
             console.log("materials listing");
             
         }
+
         for (var i = 0; i < materials.length; i++) {
            
             classScope.materialHash[materials[i].name] = materials[i];
             if (classScope.enableDebugLogging) {
                 console.log("name: " + materials[i].name);
+                console.log(materials[4].name + "I am number 5");
             }
         };
         classScope.materialPreprocessCompleted = true;
         classScope.validateUtilGenerationPreprocess();
     }
 
+
+
     this.addEventListener = function(event,func){
+        console.log(classScope.eventListeners[event]);
         if (classScope.eventListeners[event] == null) {
+            console.log("you are here");
             classScope.eventListeners[event] = [];
             if (event == "click") {
                 if (classScope.isInitialized) {
@@ -201,6 +213,8 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         }
         classScope.eventListeners[event].push(func);
     }
+
+    console.log(classScope.eventListeners[event]);
 
     this.removeEventListener = function (event, func) {
         if (classScope.eventListeners[event] != null) {
@@ -221,15 +235,16 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
 
     this.onClick = function (e) {
-      
+
         var node = classScope.getNodeObject(e.instanceID);
         e.node = node;
+        console.log(e.node);
         for (var i = 0; i < classScope.eventListeners["click"].length; i++) {
             classScope.eventListeners["click"][i](e);
         }
     }
     
-   
+
 
     this.generateNodeHash = function (err, nodes) {
        
@@ -257,7 +272,9 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                         continue
                     }
                     ;
+
                     classScope.nodeTypeCurrent = a[k];
+
                    
                     var n = classScope.nodeHash[classScope.nodeTypeCurrent];
                    
@@ -309,6 +326,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                 console.log(" ");
                 console.log("nodes listing " + a[k]);
                 var n = classScope.nodeHash[a[k]];
+                console.log(classScope.nodeHash[a[k]]);
                 for (var key in n) {
                     if (Array.isArray(n[key])) {
                         console.log("multiple nodes with same name ,use name and index to reference a single instance, if no index is passed in conjunction with this name, all nodes with this name would be affected: ")
@@ -318,11 +336,13 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                     } else {
                         console.log("unique node name, use only name to retrieve: ");
                         console.log("name: " + n[key].name);
+
+                        }
                     }
                 }
             }
            
-        }
+
 
         classScope.nodePreprocessCompleted = true;
         classScope.validateUtilGenerationPreprocess();
@@ -394,15 +414,16 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     this.getNodeObject = function (key, nodeIndex, currentNodeType) {
      
         var dataObjectRef;
-        classScope.nodeTypeCurrent = currentNodeType || classScope.nodeTypeMatrixtransform;
-        
-        if (typeof key === 'string' || key instanceof String) {            
+         classScope.nodeTypeCurrent = currentNodeType || classScope.nodeTypeMatrixtransform;
+
+        if (typeof key === 'string' || key instanceof String) {
             dataObjectRef = classScope.nodeHash[classScope.nodeTypeCurrent][key];
          
         } else {
             dataObjectRef = classScope.nodeHashIDMap[key];
+
         }
-                
+        console.log(dataObjectRef);
        
         if (dataObjectRef == null) {
             console.error('a call to  getNodeObject using ' + currentNodeType + ' list id and using node name ' + key + ' has failed , no such node found');
@@ -554,6 +575,8 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     this.toggleNodeVisibility = function (key, nodeIndex, currentNodeType) {
         classScope.setNodeVisibility(key, null, nodeIndex, currentNodeType);
     }
+
+
 
     this.getMaterialObject = function (materialName) {
         var materialObjectRef = classScope.materialHash[materialName];

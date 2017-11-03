@@ -32,10 +32,15 @@ if ($checkedOutArray->num_rows > 0){ //checks to make sure there is data before 
             sketchfabAPIUtility.setColor(checkedOut[i], sketchfabAPIUtility.SpecularHardness,"#8a0000"); //assigns the material effect to each respective material as the for loop runs currently sets normal map color to dark red
             sketchfabAPIUtility.setColor(checkedOut[i], sketchfabAPIUtility.SpecularPBR,"#8a0000"); //assigns the material effect to each respective material as the for loop runs currently sets normal map color to dark red
 
+            sketchfabAPIUtility.addEventListener('click', function () {
+                console.log("doing stuff")
+            });
 
             console.log(checkedOut[i]);
+
         }
     }
+
 
 
 

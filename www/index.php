@@ -16,9 +16,13 @@ include ('../includes/javaScript.php');
 <!--code inside this function gets run before the model loads-->
 
             checkedOutModelEffects();
-            }
 
-        var sketchfabAPIUtility = new SketchfabAPIUtility('52070901286641fbbbd299b454f32c14', document.getElementById('api-frame'), onSketchfabUtilityReady);
+//            api.addEventListener('click', function(event) {
+//                console.log(event);
+//            });
+
+            }
+        var sketchfabAPIUtility = new SketchfabAPIUtility('52070901286641fbbbd299b454f32c14', document.getElementById('api-frame'), onSketchfabUtilityReady,{internal: 1, ui_infos: 0, ui_controls: 0, watermark: 0, continuous_render: 0, supersample: 0});
 
     </script>;
 
