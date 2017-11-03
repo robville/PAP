@@ -123,6 +123,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         classScope.api.getAnimations(classScope.generateAnimationControls);
         //possible other calls here ...
 
+
        
 
     };
@@ -170,9 +171,9 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         }
         return dataObjectRef;
     }
-   
 
 
+    var mat = [];
     this.generateMaterialHash = function (err, materials) {
         if (err) {
             console.log('Error when calling getMaterialList');
@@ -186,10 +187,17 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         for (var i = 0; i < materials.length; i++) {
            
             classScope.materialHash[materials[i].name] = materials[i];
+
             if (classScope.enableDebugLogging) {
                 console.log("name: " + materials[i].name);
-                console.log(materials[4].name + "I am number 5");
+
+
+
+
+
             }
+
+            mat.push(materials[i].name.value);
         };
         classScope.materialPreprocessCompleted = true;
         classScope.validateUtilGenerationPreprocess();

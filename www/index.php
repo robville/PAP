@@ -17,14 +17,41 @@ include ('../includes/javaScript.php');
 
             checkedOutModelEffects();
 
-//            api.addEventListener('click', function(event) {
-//                console.log(event);
-//            });
 
+
+
+            console.log(sketchfabAPIUtility);
+
+            var matlist = sketchfabAPIUtility.materialHash;
+            var matarray = [];
+            var MaterialNamesArray=[];
+            for(var name in matlist) {
+
+                if (matlist.hasOwnProperty(name)){
+//                    console.log(matlist);
+                    var matobjs = matlist[name];
+                for (name in matobjs){
+                    if (matobjs.hasOwnProperty(name)){
+                        matarray.push(matobjs.name);
+
+                    }
+                }
             }
-        var sketchfabAPIUtility = new SketchfabAPIUtility('52070901286641fbbbd299b454f32c14', document.getElementById('api-frame'), onSketchfabUtilityReady,{internal: 1, ui_infos: 0, ui_controls: 0, watermark: 0, continuous_render: 0, supersample: 0});
+            }
+//            console.log(matarray );
 
-    </script>;
+            var maxVal = 8;
+            var delta = Math.floor(matarray.length / maxVal);
+            for (i = 0; i < matarray.length; i=i+delta){
+            MaterialNamesArray.push(matarray[i]);
+            }
+            console.log(MaterialNamesArray);
+        }
+
+
+        var sketchfabAPIUtility = new SketchfabAPIUtility('52070901286641fbbbd299b454f32c14', document.getElementById('api-frame'), onSketchfabUtilityReady);
+
+    </script>
 
 
 <?php
