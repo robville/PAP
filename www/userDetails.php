@@ -6,7 +6,12 @@ require_once '../includes/databaseConnect.php';
 $id = $_REQUEST['id'];
 
 $sql = "SELECT * from users WHERE id='$id'";
+
+//execute the query
 $query = $conn->query($sql);
+
+//retrieve the results
+$row = $query->fetch_assoc();
 
 
 //Handle selection errors
@@ -24,38 +29,56 @@ if (!$query) {
     <br>
     <br>
     <div>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Organization</th>
-                <th>Part #</th>
-                <th>Check Out Date</th>
-                <th>Status</th>
-            </tr>
+                <form name="editUserDetails" action="updateUserDetails.php" method="POST">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <td><input name="id" value="<?php echo $row['id'] ?>" readonly></td>
+                        </tr>
 
-            <?php
-            //create a while loop here to insert one row for each user.
-            while (($row = $query->fetch_assoc()) !== NULL) {
-                echo "<tr>";
-                echo "<td><a href='userDetails.php?id=" , $row['id'], "'>", $row['id'], "</a></td>";
-                echo "<td>", $row['firstname'], "</td>";
-                echo "<td>", $row['lastname'], "</td>";
-                echo "<td>", $row['username'], "</td>";
-                echo "<td>", $row['email'], "</td>";
-                echo "<td>", $row['phone'], "</td>";
-                echo "<td>", $row['organization'], "</td>";
-                echo "<td>", $row['partnumber'], "</td>";
-                echo "<td>", $row['checkoutdate'], "</td>";
-                echo "<td>", $row['status'], "</td>";
-                echo "</tr>";
-            }
-            ?>
-        </table>
+                        <tr>
+                            <th>Name</th>
+                            <td><?php echo $row['firstname'] . " " . $row['lastname'] ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Username</th>
+                            <td><?php echo $row['username'] ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Email</th>
+                            <td><?php echo $row['email'] ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Phone</th>
+                            <td><?php echo $row['phone'] ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Organization</th>
+                            <td><?php echo $row['organization'] ?></td>
+                        </tr>
+
+                        <tr>
+                            <th>Piece Chosen</th>
+                            <td><input name="partnumber" value="<?php echo $row['partnumber'] ?>" required /></td>
+                        </tr>
+
+                        <tr>
+                            <th>Checkout Date</th>
+                            <td><input name="checkoutdate" value="<?php echo $row['checkoutdate'] ?>" required /></td>
+                        </tr>
+
+                        <tr>
+                            <th>Status</th>
+                            <td><input name="status" value="<?php echo $row['status'] ?>" required /></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value=" SUBMIT " />
+                </form>
+
 
     </div>
 
