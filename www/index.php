@@ -15,37 +15,12 @@ include ('../includes/javaScript.php');
 
 <!--code inside this function gets run before the model loads-->
 
-            checkedOutModelEffects();
+           ModelFunctions();
 
 
 
 
-            console.log(sketchfabAPIUtility);
 
-            var matlist = sketchfabAPIUtility.materialHash;
-            var matarray = [];
-            var MaterialNamesArray=[];
-            for(var name in matlist) {
-
-                if (matlist.hasOwnProperty(name)){
-//                    console.log(matlist);
-                    var matobjs = matlist[name];
-                for (name in matobjs){
-                    if (matobjs.hasOwnProperty(name)){
-                        matarray.push(matobjs.name);
-
-                    }
-                }
-            }
-            }
-//            console.log(matarray );
-
-            var maxVal = 8;
-            var delta = Math.floor(matarray.length / maxVal);
-            for (i = 0; i < matarray.length; i=i+delta){
-            MaterialNamesArray.push(matarray[i]);
-            }
-            console.log(MaterialNamesArray);
         }
 
 
