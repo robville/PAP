@@ -16,9 +16,10 @@ if (isset($_SESSION['login'])AND isset($_SESSION['name']) AND isset($_SESSION['r
 $login = $_SESSION['login'];
 
 $testString = "1234567";
+$checkoutdate = time();
 
 //INSERT CHOSEN PART NUMBER INTO DATABASE
-mysqli_query($conn, "UPDATE users SET partnumber ='" . $testString . "' WHERE username='" . $login . "'");
+mysqli_query($conn, "UPDATE users SET partnumber ='" . $testString . "', checkoutdate='" . $checkoutdate . "' WHERE username='" . $login . "'");
 
 //UPDATE CHECKED OUT STATUS
 mysqli_query($conn, "UPDATE parts SET checkedOut =1 WHERE partnumber='" . $testString . "'");

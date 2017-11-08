@@ -63,6 +63,6 @@ if (!$query) {
 </table>
 
 <?php
-require '../includes/footer.php';
+include('../includes/footer.php');
 
 ?>
