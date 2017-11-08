@@ -44,9 +44,9 @@ if ($checkedOutArray->num_rows > 0){ //checks to make sure there is data before 
 //            console.log(sketchfabAPIUtility.materialHash[a].name + "material name");
 //        }
 
-//        sketchfabAPIUtility.addEventListener('click', function () {
-//            console.log("doing stuff")
-//        });
+        sketchfabAPIUtility.api.addEventListener('click', function(event){
+            console.log(event)
+        });
     }
 
 
