@@ -173,7 +173,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     }
 
 
-    var mat = [];
+    var matArray = [];
     this.generateMaterialHash = function (err, materials) {
         if (err) {
             console.log('Error when calling getMaterialList');
@@ -197,7 +197,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
             }
 
-            mat.push(materials[i].name.value);
+            matArray.push(materials[i].name.value);
         };
         classScope.materialPreprocessCompleted = true;
         classScope.validateUtilGenerationPreprocess();
