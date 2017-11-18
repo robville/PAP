@@ -2,16 +2,13 @@
 
 function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectRef) {
     var classScope = this;
-
     this.api;
     this.client;
-
-
-    this.clientInitObject = { };//if you want any default init options hard coded just add them here
+    this.clientInitObject = {  internal: 1, ui_infos: 0, ui_controls: 0, watermark: 0, continuous_render: 0,ui_stop:0, supersample: 0,ui_inspector:0, ui_controls:0, ui_fullscreen:0,scrollwheel:0, preload:1, autostart:1, autospin:.2,annotations_visible:0 };//if you want any default init options hard coded just add them here
     if (clientInitObjectRef != null) {
-        for (var prop in clientInitObjectRef) {       
+        for (var prop in clientInitObjectRef) {
             classScope.clientInitObject[prop] = clientInitObjectRef[prop];
-          
+
         }
     }
     this.isInitialized = false;
@@ -22,9 +19,8 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     this.nodeHash = {};
 
 
-
     this.nodeTypeMatrixtransform = "MatrixTransform";
-    this.nodeTypeCurent = classScope.nodeTypeMatrixtransform;
+    this.nodeTypeCurrent = classScope.nodeTypeMatrixtransform;
     this.nodeTypeGeometry = "Geometry";
     this.nodeTypeGroup = "Group";
     this.nodeTypeRigGeometry = "RigGeometry";
@@ -34,11 +30,9 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     classScope.nodeHash[classScope.nodeTypeGroup] = {};
     classScope.nodeHash[classScope.nodeTypeRigGeometry] = {};
 
-
-
     this.nodeHashIDMap = {};
     this.eventListeners = {};
-    this.nodesRaw;  
+    this.nodesRaw;
     this.enableDebugLogging = true;
     this.callback = callbackRef;
     //materialChannelProperties
@@ -91,7 +85,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     this.animationPreprocessCompleted = false;
 
     this.create = function () {
-       
+
         classScope.client = new Sketchfab('1.0.0', classScope.iframe);
 
         classScope.clientInitObject.success = classScope.onClientInit;
@@ -105,30 +99,29 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
 
     this.onClientInit = function (apiRef) {
-       
-        classScope.api = apiRef;      
+
+        classScope.api = apiRef;
         classScope.api.addEventListener('viewerready', classScope.onViewerReady);
         classScope.api.start();
     };
 
     this.onViewerReady = function () {
-       
+
         //prepare data for ease of use
 
-        //for each call into the api that gets used for preprocesing a flag should be created which can be validated to decide that the 
-        //utility has finished all preprocessing       
+        //for each call into the api that gets used for preprocesing a flag should be created which can be validated to decide that the
+        //utility has finished all preprocessing
         classScope.api.getMaterialList(classScope.generateMaterialHash);
-        classScope.api.getNodeMap(classScope.generateNodeHash);       
+        classScope.api.getNodeMap(classScope.generateNodeHash);
         classScope.api.getAnnotationList(classScope.generateAnnotationControls);
         classScope.api.getAnimations(classScope.generateAnimationControls);
         //possible other calls here ...
 
 
-       
 
     };
 
-   
+
 
     this.validateUtilGenerationPreprocess = function () {
 
@@ -155,8 +148,8 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
             ob.name = animations[i][1]
             ob.uid = animations[i][0];
             ob.length = animations[i][2];
-           
-        };       
+
+        };
         classScope.animationClipsLength = animations.length;
 
         classScope.animationPreprocessCompleted = true;
@@ -173,7 +166,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     }
 
 
-    var mat = [];
+
     this.generateMaterialHash = function (err, materials) {
         if (err) {
             console.log('Error when calling getMaterialList');
@@ -181,34 +174,21 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         };
         if (classScope.enableDebugLogging) {
             console.log("materials listing");
-            
+
         }
-
         for (var i = 0; i < materials.length; i++) {
-           
-            classScope.materialHash[materials[i].name] = materials[i];
 
+            classScope.materialHash[materials[i].name] = materials[i];
             if (classScope.enableDebugLogging) {
                 console.log("name: " + materials[i].name);
-
-
-
-
-
             }
-
-            mat.push(materials[i].name.value);
         };
         classScope.materialPreprocessCompleted = true;
         classScope.validateUtilGenerationPreprocess();
     }
 
-
-
     this.addEventListener = function(event,func){
-        console.log(classScope.eventListeners[event]);
         if (classScope.eventListeners[event] == null) {
-            console.log("you are here");
             classScope.eventListeners[event] = [];
             if (event == "click") {
                 if (classScope.isInitialized) {
@@ -221,8 +201,6 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         }
         classScope.eventListeners[event].push(func);
     }
-
-    console.log(classScope.eventListeners[event]);
 
     this.removeEventListener = function (event, func) {
         if (classScope.eventListeners[event] != null) {
@@ -246,63 +224,61 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
         var node = classScope.getNodeObject(e.instanceID);
         e.node = node;
-        console.log(e.node);
         for (var i = 0; i < classScope.eventListeners["click"].length; i++) {
             classScope.eventListeners["click"][i](e);
+            console.log(classScope.eventListeners["click"][i](e));
         }
     }
-    
+
 
 
     this.generateNodeHash = function (err, nodes) {
-       
+
         if (err) {
             console.log('Error when calling getNodeMap');
             return;
         };
         classScope.nodesRaw = nodes;
-       
+
 
         var currentNodeName = "";
         var currentNodeGroup = "";
         var a = [classScope.nodeTypeMatrixtransform, classScope.nodeTypeGeometry, classScope.nodeTypeGroup, classScope.nodeTypeRigGeometry];
-       
+
         for (var prop in nodes) {
-            var node = nodes[prop];            
-           
+            var node = nodes[prop];
+
             if (node.name != undefined) {
                 if ((node.name.toLowerCase().indexOf(".fbx") != -1) || (node.name.toLowerCase().indexOf("rootmodel") != -1) || (node.name.toLowerCase().indexOf("rootnode") != -1) || (node.name.toLowerCase().indexOf("polygonnode") != -1)) {
                     continue;
                 }
-              
+
                 for (var k = 0; k < a.length; k++) {
                     if (node.type != a[k]) {
                         continue
                     }
                     ;
-
                     classScope.nodeTypeCurrent = a[k];
 
-                   
                     var n = classScope.nodeHash[classScope.nodeTypeCurrent];
-                   
+
                     if (node.type == classScope.nodeTypeGeometry || node.type == classScope.nodeTypeRigGeometry) {
                         classScope.nodeHashIDMap[node.instanceID] = classScope.nodeHash[currentNodeGroup][currentNodeName];
-                                           
+
                         break;
                     }
 
-                    
+
                     if (node.children.length == 0) {
-                       
+
                         break;
                     }
-                    
-                    
+
+
                     currentNodeName = node.name;
                     currentNodeGroup = classScope.nodeTypeCurrent;
                     node.isVisible = true;
-                   
+
                     if (n[node.name] != null) {
                         //so now we have nodes with the same name and need to convert this storage into an array or push into that array
                         if (!Array.isArray(n[node.name])) {
@@ -323,7 +299,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                         n[node.name] = node;
                         classScope.nodeHashIDMap[node.instanceID] = n[currentNodeName];
                     }
-                   
+
 
                 }
             }
@@ -334,7 +310,6 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                 console.log(" ");
                 console.log("nodes listing " + a[k]);
                 var n = classScope.nodeHash[a[k]];
-                console.log(classScope.nodeHash[a[k]]);
                 for (var key in n) {
                     if (Array.isArray(n[key])) {
                         console.log("multiple nodes with same name ,use name and index to reference a single instance, if no index is passed in conjunction with this name, all nodes with this name would be affected: ")
@@ -344,19 +319,17 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                     } else {
                         console.log("unique node name, use only name to retrieve: ");
                         console.log("name: " + n[key].name);
-
-                        }
                     }
                 }
             }
-           
 
+        }
 
         classScope.nodePreprocessCompleted = true;
         classScope.validateUtilGenerationPreprocess();
     }
 
-   
+
 
 
 
@@ -420,19 +393,18 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     }
     // key can be a name or an instance id. Also remember instance id's of geometry nodes are mapped to their relevant root matrix transform node
     this.getNodeObject = function (key, nodeIndex, currentNodeType) {
-     
+
         var dataObjectRef;
-         classScope.nodeTypeCurrent = currentNodeType || classScope.nodeTypeMatrixtransform;
+        classScope.nodeTypeCurrent = currentNodeType || classScope.nodeTypeMatrixtransform;
 
         if (typeof key === 'string' || key instanceof String) {
             dataObjectRef = classScope.nodeHash[classScope.nodeTypeCurrent][key];
-         
+
         } else {
             dataObjectRef = classScope.nodeHashIDMap[key];
-
         }
-        console.log(dataObjectRef);
-       
+
+
         if (dataObjectRef == null) {
             console.error('a call to  getNodeObject using ' + currentNodeType + ' list id and using node name ' + key + ' has failed , no such node found');
             return null;
@@ -451,13 +423,13 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
         // take note the returned object could be a direct reference to the node object if it is unique , or it returns an array of node objects if they share the same name
         //or it could be a direct refrence to the node object within the array if you passed in a nodeIndex and the name is mapped to an array
-        
+
         return dataObjectRef;
     }
 
     this.lookat = function (key, direction,distance, duration, callback) {
         var dataObjectRef = classScope.getNodeObject(key,null,classScope.nodeTypeMatrixtransform);
-        
+
         var dataObjectRefSingle;
         if (dataObjectRef != null) {
             if (direction == null) {
@@ -473,7 +445,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                 dataObjectRefSingle = dataObjectRef;
             }
 
-           
+
             var target = [dataObjectRefSingle.worldMatrix[12], dataObjectRefSingle.worldMatrix[13], dataObjectRefSingle.worldMatrix[14]];
             var eye = [target[0] + (direction[0] * distance), target[1] + (direction[1] * distance), target[2] +( direction[2] * distance)];
             classScope.api.setCameraLookAt(eye, target, duration, callback);
@@ -511,9 +483,9 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
             if (dataObjectRefSingle.worldMatrixisCached = undefined) {
                 dataObjectRefSingle.worldMatrixisCached = true;
                 dataObjectRefSingle.worldMatrixCached = dataObjectRefSingle.worldMatrix;
-            
+
             }
-           
+
             var currentPosition = [dataObjectRefSingle.worldMatrix[12], dataObjectRefSingle.worldMatrix[13], dataObjectRefSingle.worldMatrix[14]];
             var newPosition = [currentPosition[0] + (direction[0] * distance), currentPosition[1] + (direction[1] * distance), currentPosition[2] + (direction[2] * distance)];
             //write new position back into matrix
@@ -561,8 +533,8 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                     dataObjectRef[i].isVisible = makeVisible;
                 }
             }
-           
-            if (makeVisible) {               
+
+            if (makeVisible) {
                 classScope.api.show(dataObjectRefSingle.instanceID);
                 if (loopArray) {
                     for (var i = 1; i < dataObjectRef.length; i++) {
@@ -584,8 +556,6 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         classScope.setNodeVisibility(key, null, nodeIndex, currentNodeType);
     }
 
-
-
     this.getMaterialObject = function (materialName) {
         var materialObjectRef = classScope.materialHash[materialName];
         if (materialObjectRef == null) {
@@ -597,7 +567,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     }
 
     this.getChannelObject = function (materialObjectRef, channelPropertyName) {
-       
+
         var channelObjectRef = materialObjectRef.channels[channelPropertyName];
         if (channelObjectRef == null) {
             console.error('a call to getChannelObject using channelPropertyName name ' + channelPropertyName + ' has failed , no such channelPropertyName found');
@@ -606,7 +576,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
         return channelObjectRef;
     }
 
-   
+
 
     this.setFactor = function (materialName, channelPropertyName, factor, performCacheReset) {
         if (factor == null) {
@@ -636,7 +606,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
                 }
 
-               
+
                 if (channelObjectRef.factorIsCached == undefined) {
                     channelObjectRef.factorIsCached = true;
                     channelObjectRef.factorCached = channelObjectRef.factor;
@@ -667,7 +637,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     }
 
     this.setTexture = function (materialName, channelPropertyName, url, textureObjectDefaults, performCacheReset) {
-        
+
         performCacheReset = performCacheReset || false;
         var materialObjectRef = classScope.getMaterialObject(materialName);
         if (materialObjectRef != null) {
@@ -676,7 +646,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
                 if (performCacheReset) {
                     if (channelObjectRef.textureIsCached != undefined) {
-                        channelObjectRef.texture = channelObjectRef.textureCached;                      
+                        channelObjectRef.texture = channelObjectRef.textureCached;
                         classScope.api.setMaterial(materialObjectRef, function () {
 
                         });
@@ -690,14 +660,14 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
                 }
 
-               
+
                 if (channelObjectRef.textureIsCached == undefined) {
                     channelObjectRef.textureIsCached = true;
                     channelObjectRef.textureCached = channelObjectRef.texture;
 
 
                 }
-                
+
                 //if the material never had a texture object to begin with we need to generate one for it
                 //else use the existing object to try preserve all properties excpt the texture uid obviously
                 var texob = {};
@@ -715,8 +685,8 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                     // default properties for a newly created texture object are not always as coded above
                     //when needed, pass in an object with any alternate specified properities and they will be used
                     if (textureObjectDefaults != null) {
-                        for (var prop in textureObjectDefaults) {                           
-                            texob[prop] = textureObjectDefaults[prop];                           
+                        for (var prop in textureObjectDefaults) {
+                            texob[prop] = textureObjectDefaults[prop];
                         }
                     }
                 } else {
@@ -773,7 +743,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
 
     this.setColor = function (materialName, channelPropertyName, hex,performCacheReset) {
-       
+
         performCacheReset = performCacheReset || false;
         var materialObjectRef = classScope.getMaterialObject(materialName);
         if (materialObjectRef != null) {
@@ -807,19 +777,19 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                 var colorObjectExists = false;
 
                 if (channelObjectRef.color == null) {
-                   
+
                     channelObjectRef.color = [1,1,1];
-                } 
+                }
 
 
                 var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
                 if (channelObjectRef.colorIsCached == undefined) {
-                   
+
                     channelObjectRef.colorIsCached = true;
                     channelObjectRef.colorCached = [];
                     channelObjectRef.colorCached[0] = channelObjectRef.color[0];
                     channelObjectRef.colorCached[1] = channelObjectRef.color[1];
-                    channelObjectRef.colorCached[2] = channelObjectRef.color[2];                   
+                    channelObjectRef.colorCached[2] = channelObjectRef.color[2];
 
 
                 }
@@ -832,7 +802,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                 });
 
             }
-        }       
+        }
 
     }
 
@@ -842,7 +812,7 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
     }
 
 
-   this.linearToSrgb = function (c) {
+    this.linearToSrgb = function (c) {
         var v = 0.0;
         if (c < 0.0031308) {
             if (c > 0.0)
@@ -876,27 +846,27 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
 
        classScope.playAnimationClipOnceOnly = _playOnceOnly || false;
        var dataObjectRef = classScope.getAnimationObject(key);
-       
+
        if (dataObjectRef != null) {
            classScope.currentAnimationObject = dataObjectRef;
            classScope.api.setCurrentAnimationByUID(dataObjectRef.uid,classScope.OnSetAnimationClip);
        }
-      
-      
+
+
    }
 
    this.OnSetAnimationClip = function (err) {
        console.log("OnSetAnimationClip " + classScope.currentAnimationObject.name);
        classScope.api.play(classScope.OnPlayAnimationClip);
       // classScope.api.seekTo(0);
-       
+
    }
 
    this.OnPlayAnimationClip = function (err) {
        console.log("OnPlayAnimationClip " + classScope.currentAnimationObject.name);
         classScope.api.seekTo(0,classScope.OnSeekAnimationClip);
-      
-      
+
+
    }
 
    this.OnSeekAnimationClip = function () {
@@ -913,11 +883,11 @@ function SketchfabAPIUtility(urlIDRef, iframeRef, callbackRef, clientInitObjectR
                clearInterval(classScope.animationTimerIntervalID);
                classScope.api.seekTo(classScope.currentAnimationObject.length - 0.05);
                classScope.api.pause();
-              
-               
+
+
            }
        } );
-      
+
    }
    */
 

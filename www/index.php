@@ -17,14 +17,20 @@ include ('../includes/javaScript.php');
 
            ModelFunctions();
 
+            sketchfabAPIUtility.addEventListener('click', onSketchfabClick);
+
 
 
 
 
         }
+        function onSketchfabClick(e) {
 
+            console.log(e.node.name);
 
-        var sketchfabAPIUtility = new SketchfabAPIUtility('52070901286641fbbbd299b454f32c14', document.getElementById('api-frame'), onSketchfabUtilityReady);
+        }
+
+        var sketchfabAPIUtility = new SketchfabAPIUtility('52070901286641fbbbd299b454f32c14', document.getElementById('api-frame'), onSketchfabUtilityReady,);
 
     </script>
 
